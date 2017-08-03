@@ -25,5 +25,7 @@ public class Principal {
         imp = p.valorImposto();
 
         System.out.println("\nImposto = " + imp);
+
+        System.out.println("Teste!");
     }
 }
