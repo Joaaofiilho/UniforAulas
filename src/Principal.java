@@ -3,29 +3,24 @@ public class Principal {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        Produto p = new Produto();
-
         float preco, imp;
         String tipo;
-
-        System.out.println("Digite o preço do produto: ");
+        
+        System.out.print("Digite o preco do produto: ");
         preco = scan.nextFloat();
 
         scan.nextLine();
 
-        System.out.println("Digite o tipo do produto: ");
+        System.out.print("Digite o tipo do produto: ");
         tipo = scan.nextLine();
+        
+        Produto p = new Produto(preco, tipo);
 
-        p.valor = preco;
-        p.tipo = tipo;
-
-        System.out.println("\nPreço do produto = " +p.valor);
-        System.out.println("\nTipo do produto = " + p.tipo);
+        System.out.printf("Preco do produto = %.2f\n", p.valor);
+        System.out.printf("Tipo do produto = %s\n", p.tipo);
 
         imp = p.valorImposto();
 
-        System.out.println("\nImposto = " + imp);
-
-        System.out.println("Teste!");
+        System.out.printf("Imposto = %.2f", imp);
     }
 }
